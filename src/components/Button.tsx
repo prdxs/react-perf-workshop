@@ -1,4 +1,4 @@
-import React, { FC, MouseEventHandler } from "react";
+import React, { FC, MouseEventHandler, memo } from "react";
 
 interface Props {
   onClick: MouseEventHandler<HTMLButtonElement>;
@@ -9,4 +9,4 @@ const Button: FC<Props> = ({ onClick, children }) => {
   return <button onClick={onClick}>{children}</button>;
 };
 
-export default Button;
+export default memo<FC<Props>>(Button);
