@@ -1,12 +1,13 @@
-import React, { FC, MouseEventHandler, memo } from "react";
+import React, { FC, MouseEventHandler, memo, CSSProperties } from "react";
 
 interface Props {
   onClick: MouseEventHandler<HTMLButtonElement>;
+  style?: CSSProperties;
 }
 
-const Button: FC<Props> = ({ onClick, children }) => {
+const Button: FC<Props> = ({ style, onClick, children }) => {
   console.log('Button: rendering');
-  return <button onClick={onClick}>{children}</button>;
+  return <button style={style} onClick={onClick}>{children}</button>;
 };
 
 export default memo<FC<Props>>(Button);
