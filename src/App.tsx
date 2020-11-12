@@ -4,9 +4,9 @@ import "./App.css";
 
 function App() {
   console.log("App: rendering");
-  const [count, setCout] = useState(0);
+  const [count, setCount] = useState(0);
 
-  const handleClick = useCallback(() => setCout(count + 1), []);
+  const handleClick = useCallback(() => setCount(count + 1), [count]);
 
   return (
     <div className="App">
