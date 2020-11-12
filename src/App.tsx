@@ -6,7 +6,7 @@ function App() {
   console.log("App: rendering");
   const [count, setCount] = useState(0);
 
-  const handleClick = useCallback(() => setCount(count + 1), [count]);
+  const handleClick = useCallback(() => setCount(count => count + 1), []);
 
   return (
     <div className="App">
