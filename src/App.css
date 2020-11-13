@@ -6,3 +6,10 @@
   width: 100vw;
   height: 100vh;
 }
+
+.App-controls {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5rem 1rem;
+}
