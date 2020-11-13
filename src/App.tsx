@@ -27,7 +27,7 @@ function App() {
       outline: "none",
       cursor: "pointer",
     }),
-    []
+    [theme]
   );
 
   return (
