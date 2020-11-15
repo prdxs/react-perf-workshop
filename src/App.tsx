@@ -11,12 +11,8 @@ function App() {
 
   const handleClick = useCallback(() => setCount((count) => count + 1), []);
   const changeTheme = useCallback(() => {
-    if (theme === themes[0]) {
-      setTheme(themes[1]);
-    } else {
-      setTheme(themes[0]);
-    }
-  }, [theme]);
+    setTheme(theme => theme === themes[0] ? themes[1] : themes[0]);
+  }, []);
 
   const buttonStyle = useMemo(
     () => ({
